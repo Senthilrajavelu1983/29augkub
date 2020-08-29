@@ -20,20 +20,20 @@ spec:
       - containerPort: 5432
     volumeMounts:
       - name: pgdata
-        mountPath: /var/lib/postgresql/data
+        mountPath: /var/lib/postgresql/data --------->inside container local directory 
   - name: web
     image: nginx
     ports:
       - containerPort: 80
     volumeMounts:
       - name: webdata
-        mountPath: /usr/share/nginx/html/
+        mountPath: /usr/share/nginx/html/ ------------>inside container local directory
   volumes:
   - name: pgdata
     hostPath:
-      path: /var/lib/postgres
+      path: /var/lib/postgres ------------->NFS/Shared directory (can mount all worker node)
       type: DirectoryOrCreate
   - name: webdata
     hostPath:
-      path: /var/www/html
+      path: /var/www/html -------------->NFS/Shared directory (can mount all worker node)
       type: DirectoryOrCreate
