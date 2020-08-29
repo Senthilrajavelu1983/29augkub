@@ -109,11 +109,11 @@ execute all playbooks in the below manner to get you loud better....
 
 1. create name space
 
-https://github.com/FourTimes/Kubernetes/blob/master/namespace/namespace.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/namespace/namespace.yaml
 
 2. create pods...
 
-https://github.com/FourTimes/Kubernetes/blob/master/pod/1-singlepod.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/pod/1-singlepod.yml
 
 kubectl apply -f 1-singlepod.yml
 kubectl get all -n twitter -l app=nginx
@@ -123,7 +123,7 @@ kubectl exec -it pod/webserver bash -n twitter
 now you need to understand that lablels will help you to create exact report and find the particular resources
 
 
-https://github.com/FourTimes/Kubernetes/blob/master/pod/2-multipods.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/pod/2-multipods.yml
 
 kubectl get all -n facebook -l app=httpd
 
@@ -151,7 +151,7 @@ kubectl logs pod/multicontainer-pods -n twitter -c httpd1
 
 -----------------
 kubectl create ns twitter
-https://github.com/FourTimes/Kubernetes/blob/master/pod/3-storage.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/pod/3-storage.yml
 kubectl apply -f 3-storage.yml
 
 kubectl get pods -n twitter -o wide
@@ -161,25 +161,25 @@ kubectl describe pod/database -n twitter
 
 check the directory has been created to that node
 
-https://github.com/FourTimes/Kubernetes/blob/master/pod/4-multistorage.yml
-https://github.com/FourTimes/Kubernetes/blob/master/pod/5-full.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/pod/4-multistorage.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/pod/5-full.yaml
 ********************************************************************************************
 find out the below yaml file is deployed to which name space
 
-https://github.com/FourTimes/Kubernetes/blob/master/pod/6-example.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/pod/6-example.yml
 
 kubectl get pod
 kubectl describe pod <pod name>
 ********************************************************************************************
 3. services
 
-https://github.com/FourTimes/Kubernetes/blob/master/service/loadbalancer-facebook.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/service/loadbalancer-twiiter.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/service/loadbalancer-facebook.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/service/loadbalancer-twiiter.yaml
 
 the above loadbalancer yaml will work only if you have the nodes in google cloud.because you will have the public ip.
 
-https://github.com/FourTimes/Kubernetes/blob/master/service/nodeport-facebook.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/service/nodeport-twitter.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/service/nodeport-facebook.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/service/nodeport-twitter.yaml
 
 kubectl get pod,services -n twitter -o wide
 
@@ -192,11 +192,11 @@ kubectl describe services
 
 4. Replica set
 
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/1-singlereplica.yml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/2-singlepod-singlereplica.yml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/3-multireplica.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/4-singlepod-singlereplica-error.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/5-replica-nodeport.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/replicaset/1-singlereplica.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/replicaset/2-singlepod-singlereplica.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/replicaset/3-multireplica.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/replicaset/4-singlepod-singlereplica-error.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/replicaset/5-replica-nodeport.yml
 
 kubectl get replicas
 kubectl describe replicas
@@ -207,8 +207,8 @@ labels --> service -- selector , replica -- match ---> should be same
 
 5. Deployments
 
-https://github.com/FourTimes/Kubernetes/blob/master/deployments/1-deployment-facebook.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/deployments/2-deployment-twitter.yml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/deployments/1-deployment-facebook.yaml
+https://github.com/Senthilrajavelu1983/29augkub/blob/master/deployments/2-deployment-twitter.yml
 
 kubectl get deploy
 kubectl describe deploy
